@@ -23,6 +23,9 @@
             "data": ""
           }
         },
+        "collection": {
+          "data": "{{\"test\"}}"
+        },
         "command": {
           "data": "FIND"
         },
@@ -33,7 +36,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"null\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"{{\"test\"}}\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -48,16 +51,22 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.collection.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "\"test\""
+    ],
     "agentAllowInput": true,
     "agentDescription": "Execute the TestTool action to query the database",
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
-    "datasourceUpdatedAt": "2026-02-19T23:47:09Z"
+    "datasourceUpdatedAt": "2026-02-19T23:49:25Z"
   },
   "id": "Page1_TestTool",
   "deleted": false,
