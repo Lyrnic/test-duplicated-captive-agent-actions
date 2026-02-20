@@ -2,12 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "keysConfig": {
-      "\"\"test\"\"": {
-        "isRequired": true,
-        "keyDescription": "Test"
-      }
-    },
+    "keysConfig": {},
     "name": "TestTool",
     "datasource": {
       "name": "Untitled Datasource 5",
@@ -30,7 +25,7 @@
           }
         },
         "collection": {
-          "data": ""
+          "data": "{{\"Test\"}}"
         },
         "command": {
           "data": "FIND"
@@ -42,7 +37,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"{{\"Test\"}}\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -57,16 +52,22 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.collection.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "\"Test\""
+    ],
     "agentAllowInput": true,
     "agentDescription": "Execute the TestTool action to query the database",
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
-    "datasourceUpdatedAt": "2026-02-19T23:59:44Z"
+    "datasourceUpdatedAt": "2026-02-20T01:36:35Z"
   },
   "id": "Page1_TestTool",
   "deleted": false,
